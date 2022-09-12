@@ -23,4 +23,7 @@
 }
 
 @layer utilities {
+	input {
+		@apply p-4 w-full h-full bg-transparent placeholder:text-zinc-500 text-right focus:outline-0;
+	}
 }
