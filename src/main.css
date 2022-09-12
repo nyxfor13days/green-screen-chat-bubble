@@ -3,9 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+	body {
+		@apply bg-green-500 text-zinc-900;
+	}
 }
 
 @layer components {
+	.chat {
+		height: calc(100vh - 64px);
+	}
+
+	.message-container {
+		@apply px-4 py-2 max-w-[256px] bg-zinc-200 rounded-2xl rounded-tr-sm shadow-xl;
+	}
+
+	.message-container .message {
+		@apply font-medium;
+	}
 }
 
 @layer utilities {
