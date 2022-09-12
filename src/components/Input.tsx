@@ -1,11 +1,13 @@
 import React from 'react';
+import MessagesStore from '../features/MessagesStore';
 
 const Input = () => {
+	const { addMessage } = MessagesStore();
 	const [message, setMessage] = React.useState('');
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		console.log(message);
+		addMessage(message);
 		setMessage('');
 	};
 
@@ -20,6 +22,7 @@ const Input = () => {
 					aria-placeholder='Enter your message'
 					value={message}
 					onChange={(event) => setMessage(event.target.value)}
+					autoFocus
 				/>
 				<button className='hidden' type='submit'>
 					Send
