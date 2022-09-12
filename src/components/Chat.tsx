@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessagesContextType } from '../@types/message';
 import Message from './Message';
 
 const Chat = () => {
